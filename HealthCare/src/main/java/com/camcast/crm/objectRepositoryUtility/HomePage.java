@@ -16,6 +16,11 @@ public class HomePage {
 
 	@FindBy(linkText = "Contacts")
 	private WebElement Contactlink;
+	
+	@FindBy(linkText = "Documents")
+	private WebElement Documentlink;
+
+	
 
 	@FindBy(xpath = "(//a[text()='Products'])[1]")
 	private WebElement productlink;
@@ -67,6 +72,10 @@ public class HomePage {
 		return Opportunitielink;
 	}
 
+	public WebElement getDocumentlink() {
+		return Documentlink;
+	}
+	
 	public void tologoutApp(WebDriver driver) {
 		Actions action = new Actions(driver);
 		action.moveToElement(Administratorlink).perform();
