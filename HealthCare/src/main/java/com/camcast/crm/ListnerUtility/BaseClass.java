@@ -15,7 +15,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 import com.camcast.crm.objectRepositoryUtility.HomePage;
-import com.camcast.crm.objectRepositoryUtility.LoginPage;
 import com.comcast.crm.generic.fileutility.ExcelUtility;
 import com.comcast.crm.generic.fileutility.JsonUtility;
 import com.comcast.crm.generic.fileutility.PropertieFileUtility;
@@ -65,8 +64,8 @@ public class BaseClass {
 		String URL = plib.togetDataFromPropFile("url");
 		String USERNAME = plib.togetDataFromPropFile("username");
 		String PASSWORD = plib.togetDataFromPropFile("password");
-		LoginPage lp = new LoginPage(driver);
-		lp.loginToApp(URL, USERNAME, PASSWORD);
+		//LoginPage lp = new LoginPage(driver);
+	//	lp.loginToApp(URL, USERNAME, PASSWORD);
 
 	}
 
