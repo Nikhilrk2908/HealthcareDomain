@@ -25,35 +25,40 @@ import com.comcast.crm.generic.webDriverUtility.WebDriverUtility;
 import com.comcast.crm.genericdatabaseutility.DataBaseUtility;
 
 public class BaseClass {
-	
+
 	public DataBaseUtility dlib = new DataBaseUtility();
-	public ExcelUtility elib=new ExcelUtility();
+	public ExcelUtility elib = new ExcelUtility();
 	public WebDriverUtility wlib = new WebDriverUtility();
 	public PropertieFileUtility plib = new PropertieFileUtility();
 	public JavaUtility jlib = new JavaUtility();
 	public JsonUtility jsonlib = new JsonUtility();
-	public WebDriver driver ;
-	public static  WebDriver sdriver=null ;
+	public WebDriver driver;
+	public static WebDriver sdriver = null;
+
 	@BeforeSuite
 	public void configBS() throws Throwable {
 		System.out.println("===connect to Db , Refort to config====");
 		dlib.getConnection();
 	}
+
 	@Parameters("BROWSER")
 	@BeforeClass(alwaysRun = true)
 	public void configBC(String browser) throws IOException {
 		System.out.println("===launch the browser====");
-		String BROWSER=browser;
-		//String BROWSER = plib.togetDataFromPropFile("browser");
+		String BROWSER = browser;
+		// String BROWSER = plib.togetDataFromPropFile("browser");
 		if (BROWSER.equals("chrome")) {
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 		} else if (BROWSER.equals("firefox")) {
 			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
 		} else if (BROWSER.equals("edge")) {
 			driver = new EdgeDriver();
-		}
-		else {
+			driver.manage().window().maximize();
+		} else {
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 		}
 		UtilityClassObjext.setDriver(driver);
 	}
