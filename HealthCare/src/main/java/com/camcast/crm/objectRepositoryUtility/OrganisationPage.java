@@ -17,7 +17,7 @@ public class OrganisationPage {
 	@FindBy(name = "accountname")
 	private WebElement orgnameedt;
 	
-	@FindBy(xpath = "(//input[@title='Save [Alt+S]'])[1]")
+	@FindBy(name = "button")
 	private WebElement savebtn;
 	
 	
