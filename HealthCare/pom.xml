@@ -40,11 +40,7 @@
     <version>9.2.0</version>
 </dependency>
 
-  	<dependency>
-  		<groupId>Accenture</groupId>
-  		<artifactId>AccentureProject</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
+  	
   
   <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 <dependency>
