@@ -19,11 +19,7 @@
     <version>4.1.2</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>4.1.2</version>
-</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -40,11 +36,6 @@
     <version>9.2.0</version>
 </dependency>
 
-  	<dependency>
-  		<groupId>Accenture</groupId>
-  		<artifactId>AccentureProject</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
   
   <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 <dependency>
